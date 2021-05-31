@@ -1,0 +1,71 @@
+{
+  "name": "ThinksuranceUITest",
+  "version": "1.0.0",
+  "description": "FrontEnd Test Automation Framework",
+  "main": "./node_modules/.bin/wdio",
+  "scripts": {
+    "clean": "shx rm -rf ./report",
+    "test": "wdio wdio.conf.js",
+    "test-firefox": "./geckodriver --binary 'C:/Program File/Mozilla Firefox/firefox.exe' && wdio wdio.conf.js",
+    "lint": "eslint .",
+    "report": "allure serve report/allure-results"
+  },
+  "keywords": [
+    "mocha",
+    "uitesting",
+    "webdriver",
+    "webdriverio",
+    "e2e",
+    "selenium",
+    "test automation",
+    "javascript"
+  ],
+  "author": "Marco Olsen <marcoolsen10@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "shx": "^0.3.2",
+    "superagent": "^5.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/eslint-plugin": "^7.11.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "@wdio/allure-reporter": "^7.5.2",
+    "@wdio/cli": "^7.5.2",
+    "@wdio/junit-reporter": "^7.5.2",
+    "@wdio/local-runner": "^7.5.2",
+    "@wdio/mocha-framework": "^7.5.2",
+    "@wdio/sauce-service": "^7.5.2",
+    "@wdio/selenium-standalone-service": "^7.5.2",
+    "@wdio/spec-reporter": "^7.5.2",
+    "@wdio/sync": "^7.5.2",
+    "babel-eslint": "^10.1.0",
+    "chromedriver": "^89.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-mocha": "^6.3.0",
+    "moment": "^2.27.0",
+    "wdio-chromedriver-service": "^7.0.0",
+    "wdio-json-reporter": "^2.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
